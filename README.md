@@ -2,7 +2,7 @@
 Docker container combining transmission and Private Internet Access VPN, based on linuxserver.io/transmission
 
 ## Usage
-Set your PIA credentials by creating a file `.env` by setting the following variables:
+Set your PIA credentials by creating a file `.env` to set the following variables:
 
 ```
 PIA_USER=xxxxx
