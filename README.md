@@ -8,11 +8,7 @@ git clone --recursive https://github.com/KasperSkytte/transmission-wireguard-pia
 cd transmission-wireguard-piavpn
 ```
 
-and set your PIA credentials by creating a file `.env` with the following variables:
-```
-PIA_USER=xxxxx
-PIA_PASS=yyyyy
-```
+and set your PIA user credentials in the `docker-compose.yml` file.
 
 Then run the `prepare.sh` script (which simply generates scripts in `volumes/config`) and afterwards `docker-compose up -d` and you should be connected shortly. See the respective documentation of the individual containers at https://github.com/linuxserver/docker-transmission and https://github.com/linuxserver/docker-wireguard. You can set the download and watch folders to whereever, but the scripts in `volumes/config` are required.
 
