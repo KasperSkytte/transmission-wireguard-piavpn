@@ -12,4 +12,6 @@ and set your PIA user credentials in the `docker-compose.yml` file.
 
 Then run the `prepare.sh` script (which simply generates scripts in `volumes/config`) and afterwards `docker-compose up -d` and you should be connected shortly. See the respective documentation of the individual containers at https://github.com/linuxserver/docker-transmission and https://github.com/linuxserver/docker-wireguard. You can set the download and watch folders to whereever, but the scripts in `volumes/config` are required.
 
-Here only the two docker containers themselves are tunneled through the VPN, not the host or anything else. To tunnel all traffic from the host, remove the `ALLOWEDIPS` option from the `docker-compose.yml` file, which will then default to `0.0.0.0/0`.
+Note that currently the wireguard configuration file (`/config/wg0.conf`) will be overwritten by the PIA scripts, so most options for the linuxserver wireguard container will not work.
+
+This repo is still work in progress. I am currently working on getting ONLY the wireguard and transmission containers' traffic to route through the VPN, currently everything else is also routed.
