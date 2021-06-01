@@ -11,14 +11,10 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Copenhagen
-      - PIA_USER=${PIA_USER}
-      - PIA_PASS=${PIA_PASS}
       - VPN_PROTOCOL=wireguard
       - AUTOCONNECT=true
       - PIA_USER= #fill-in
       - PIA_PASS= #fill-in
-      - INTERNAL_SUBNET=10.13.13.0
-      - ALLOWEDIPS=10.13.13.*
     ports:
       - 9091:9091/tcp
     volumes:
